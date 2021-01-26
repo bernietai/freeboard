@@ -104,10 +104,15 @@
             })
             .then(response => response.text())
             .then((response) => {
-                var newData;
-                newData = JSON.parse(response);
-                updateCallback(newData);          
 
+                var newData;
+                try{
+                    newData = JSON.parse(response);
+                    updateCallback(newData);          
+                }catch(e){
+                    console.log('Error ',e);
+                }
+            
             }).catch(error => {
                 console.log('Request '+query_url+' failed ', error); 
                 updateCallback(null); 
