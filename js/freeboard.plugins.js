@@ -1644,7 +1644,7 @@ freeboard.loadDatasourcePlugin({
         }
     });
 
-    freeboard.addStyle('.html-widget', "white-space:normal;width:100%;height:100%");
+    freeboard.addStyle('.html-widget', "white-space:normal;width:100%;height:100%;overflow:auto");
 
     var htmlWidget = function (settings) {
         var self = this;
